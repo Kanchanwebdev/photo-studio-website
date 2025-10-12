@@ -2148,3 +2148,73 @@ body {
     font-size: 0.9rem;
   }
 }
+
+
+
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("/hero1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* subtle overlay for better text readability */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.hero-subtext {
+  color: #f0e6d2;
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+}
+
+.btn-hero {
+  background-color: #bfa052;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #a68d3f;
+}
+.hero {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
