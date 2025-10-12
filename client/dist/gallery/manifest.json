@@ -1,0 +1,52 @@
+{
+  "prewedding": [
+    "/gallery/prewedding/img1.jpg",
+    "/gallery/prewedding/img10.JPG",
+    "/gallery/prewedding/img11.jpg.jpg",
+    "/gallery/prewedding/img12.jpg",
+    "/gallery/prewedding/img13.jpg",
+    "/gallery/prewedding/img14.jpg",
+    "/gallery/prewedding/img15.jpg",
+    "/gallery/prewedding/img16.jpg",
+    "/gallery/prewedding/img17.jpg",
+    "/gallery/prewedding/img2.jpg",
+    "/gallery/prewedding/img3.jpg",
+    "/gallery/prewedding/img4.jpg",
+    "/gallery/prewedding/img5.JPG",
+    "/gallery/prewedding/img6.jpg",
+    "/gallery/prewedding/img7.JPG",
+    "/gallery/prewedding/img8.jpg",
+    "/gallery/prewedding/img9.jpg"
+  ],
+  "wedding": [
+    "/gallery/wedding/img1.jpg",
+    "/gallery/wedding/img2.jpg",
+    "/gallery/wedding/img3.jpg",
+    "/gallery/wedding/img4.jpg",
+    "/gallery/wedding/img5.webp",
+    "/gallery/wedding/img6.webp",
+    "/gallery/wedding/img7.webp",
+    "/gallery/wedding/img8.webp",
+    "/gallery/wedding/img9.jpg",
+    "/gallery/wedding/img10.webp",
+    "/gallery/wedding/img11.webp"
+  ],
+  "Baby Shoot": [
+    "/gallery/Baby Shoot/img1.JPG",
+    "/gallery/Baby Shoot/img2.JPG",
+    "/gallery/Baby Shoot/img3.JPG",
+    "/gallery/Baby Shoot/img4.JPG"
+    
+  ],
+  "Baby Shower": [
+    "/gallery/Baby Shower/img1.jpg",
+    "/gallery/Baby Shower/img2.jpg",
+    "/gallery/Baby Shower/img3.jpg"
+  ],
+  "Barshe": [
+    "/gallery/Barshe/img1.jpg",
+    "/gallery/Barshe/img2.jpg",
+    "/gallery/Barshe/img3.jpg",
+    "/gallery/Barshe/img4.jpg"
+  ]
+}
