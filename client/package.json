@@ -1,0 +1,31 @@
+{
+  "name": "photo-studio-client",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare:gallery": "node scripts/process-photos.mjs"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.2",
+    "file-saver": "^2.0.5",
+    "framer-motion": "^12.23.22",
+    "lucide-react": "^0.545.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "sharp": "^0.33.4",
+    "vite": "^5.4.8"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "prepare:gallery": "node ./scripts/process-photos.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.34.4"
+  }
+}

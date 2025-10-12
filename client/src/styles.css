@@ -1,0 +1,2023 @@
+/* ------------------- Global Reset & Fonts ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  background: #fdfcf8; /* soft off-white */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Root container for sticky footer */
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------- Typography ------------------- */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #b68d40; /* elegant gold */
+}
+
+p {
+  color: #f94d6f;
+}
+
+/* ------------------- Navbar ------------------- */
+.navbar {
+  background: #111;
+  border-bottom: 1px solid #333;
+  padding: 0.8rem 2rem;
+}
+
+.navbar a {
+  color: #fdfcf8;
+  font-weight: 500;
+  margin-left: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #b68d40; /* gold hover */
+}
+
+/* ------------------- Hero Section ------------------- */
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  padding: 50px;
+  border-radius: 14px;
+  color: white;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: #fdfcf8;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+/* ------------------- Buttons ------------------- */
+.btn-primary {
+  background: #b68d40;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #967634;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: 2px solid #b68d40;
+  color: #b68d40;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #b68d40;
+  color: white;
+}
+
+/* ------------------- About Section ------------------- */
+.about-section {
+  padding: 70px 20px;
+  background: #fffaf5;
+  text-align: center;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.about-photo img {
+  max-width: 350px;
+  border-radius: 50%;
+  border: 5px solid #b68d40;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------- Services ------------------- */
+.services-preview {
+  padding: 70px 20px;
+  background: #fdfcf8;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  border-top: 4px solid #b68d40;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #b68d40;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #967634;
+}
+
+
+
+/* ------------------- Testimonials ------------------- */
+.testimonials-container {
+  padding: 70px 20px;
+  background: #fffaf5;
+  text-align: center;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-feedback {
+  font-style: italic;
+  color: #444;
+}
+
+/* ------------------- Footer ------------------- */
+footer {
+  background: #111;
+  color: #ddd;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 60px;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: #b68d40;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding: 0.7rem 0;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* ------------------- WhatsApp Button ------------------- */
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe57;
+}
+
+
+/* ====== Global Theme ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fefdfb; /* pastel white */
+  color: #444; /* muted text */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c5a253; /* elegant golden */
+}
+
+p, li {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ====== Buttons ====== */
+.btn,
+button {
+  background: #c5a253;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  background: #a88432; /* deeper golden */
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #c5a253;
+  color: #c5a253;
+}
+
+.btn-secondary:hover {
+  background: #c5a253;
+  color: #fff;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  height: 90vh;
+  background: url("/hero.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hero-overlay p {
+  color: #f5f5f5;
+}
+
+/* ====== Gallery ====== */
+.gallery-grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-grid-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid-item img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ====== Footer ====== */
+footer {
+  background: #111;
+  color: #ddd;
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a {
+  color: #c5a253;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+
+/* Admin form */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0; /* spacing between inputs */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form .btn {
+  background: #d4af37; /* gold */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  width: auto; /* button doesn’t stretch full width */
+}
+
+form .btn:hover {
+  background: #b8962d;
+}
+
+
+
+
+/* Hero with gradient */
+.hero-gradient {
+  height: 90vh;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.35); /* subtle dark overlay */
+  padding: 50px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #fdf5e6; /* soft pastel white/golden */
+}
+
+.hero-overlay p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #f0e68c; /* golden pastel */
+}
+
+.btn-primary {
+  background: #d4af37; /* gold */
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #b8860b; /* darker gold */
+}
+
+
+
+/* Hero Section 
+.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #fffdf7, #f2e6d9, #e8d8b5);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+*/
+.hero-overlay {
+  background: none; /* remove gray box */
+  padding: 0;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #3b2d1f; /* deep elegant brown */
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.5s ease;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  color: #c9a54d; /* pastel golden */
+  margin-bottom: 2rem;
+  animation: fadeInUp 2s ease;
+}
+
+.btn-hero {
+  background: #c9a54d;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: fadeInUp 2.5s ease;
+}
+
+.btn-hero:hover {
+  background: #b8943f;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #fffefc, #f9f4eb, #f3e5c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  color: #3b2d1f; /* deep brown */
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #3b2d1f;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  color: #c9a54d; /* pastel gold */
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  background: #c9a54d;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #b8943f;
+}
+
+
+
+
+
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  /* Animated Pastel Gradient */
+background: linear-gradient(135deg, #acfa91, #fcaccb, #f9dc97);
+
+ background-size: 300% 300%;
+  animation: pastelShift 12s ease-in-out infinite;
+}
+
+@keyframes pastelShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* 🌟 SERVICES SECTION (Photo Studio Style) */
+.services-section {
+  padding: 60px 20px;
+  background: #fffdf8;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  color: #bfa05a;
+  margin-bottom: 10px;
+}
+
+.services-section p.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px auto;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #7a5c24;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-card .price {
+  font-size: 1.1rem;
+  color: #bfa05a;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.btn-brand {
+  background-color: #c6a44b;
+  color: white;
+  border: none;
+}
+.btn-brand:hover {
+  background-color: #b2923f;
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  font-weight: bold;
+  background: #c7a948;
+  color: white;
+}
+
+.table tr:hover {
+  background: #fff7e6;
+}
+
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: #b02a37;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.btn-secondary:hover {
+  background-color: #565e64;
+}
+
+
+.btn-brand {
+  background-color: #c7a948;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.btn-brand:hover {
+  background-color: #b09038;
+}
+
+
+body {
+  background-color: #fffaf5;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: #c5a349;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+
+/* ===== GALLERY PAGE STYLING ===== */
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #fffaf5;
+}
+
+/* ===== TITLE ===== */
+.section-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #c9a43c;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* ===== CATEGORY TABS ===== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 10px 22px;
+  border: 2px solid #c9a43c;
+  background: transparent;
+  color: #c9a43c;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background-color: #c9a43c;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ===== IMAGE GRID ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.gallery-grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f7f7f7;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-grid-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.gallery-grid-item:hover .gallery-photo {
+  transform: scale(1.05);
+}
+
+/* ===== WATERMARK (LOGO) ===== */
+.watermark {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.watermark img {
+  width: 60px;
+  height: auto;
+  opacity: 0.5;
+  filter: brightness(0) invert(1);
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+}
+
+.lightbox-prev {
+  left: 40px;
+}
+
+.lightbox-next {
+  right: 40px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .tab-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 1.8rem;
+  }
+
+  .watermark img {
+    width: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   🌟 Testimonials Page Styling
+   =========================== */
+
+.min-h-screen {
+  background-color: #fffaf5;
+}
+
+/* Title Section */
+.text-center h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #c5a349;
+}
+
+.text-center p {
+  color: #777;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* ===========================
+   ✍️ Review Form
+   =========================== */
+
+.max-w-2xl {
+  border: 1px solid #f1e3c6;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.max-w-2xl h4 {
+  font-family: "Playfair Display", serif;
+  color: #c5a349;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.max-w-2xl input,
+.max-w-2xl textarea,
+.max-w-2xl select {
+  border: 1px solid #e7d8b4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.max-w-2xl input:focus,
+.max-w-2xl textarea:focus,
+.max-w-2xl select:focus {
+  border-color: #c5a349;
+  box-shadow: 0 0 6px rgba(197, 163, 73, 0.4);
+  outline: none;
+}
+
+.max-w-2xl button {
+  background-color: #c5a349;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.max-w-2xl button:hover {
+  background-color: #b3923d;
+}
+
+/* ===========================
+   ✨ FIXED Admin Testimonials Styling
+   =========================== */
+
+.admin-testimonials-page {
+  background: #fffaf5;
+  padding: 60px 20px 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  color: #c5a349;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Form */
+.admin-form {
+  max-width: 650px;
+  background: #ffffff;
+  border: 1px solid #f3e2c0;
+  border-radius: 16px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  border: 1px solid #e7d8b4;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+  border-color: #c5a349;
+  box-shadow: 0 0 6px rgba(197, 163, 73, 0.3);
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #c5a349;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.submit-btn:hover {
+  background: #b18c2f;
+}
+
+/* Testimonials Grid */
+.admin-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Testimonial Card */
+.admin-testimonial-card {
+  background: #fff;
+  border: 1px solid #f3e2c0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 22px;
+  transition: all 0.3s ease;
+}
+
+.admin-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: 600;
+  color: #222;
+}
+
+.stars {
+  margin: 8px 0 14px;
+  color: #c5a349;
+}
+
+/* Buttons in card */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.edit-btn {
+  background: #f1c40f;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background: #d4ac0d;
+  color: white;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .admin-form {
+    padding: 20px;
+  }
+  .admin-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===============================
+   📸 CLIENT TESTIMONIALS PAGE
+   =============================== */
+
+.testimonials-section {
+  background-color: #fffaf5;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Title ---------- */
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  color: #c5a349;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 8px;
+}
+
+.testimonials-section p.subtitle {
+  color: #6b6b6b;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* ---------- Review Form ---------- */
+.testimonial-form {
+  background: #fff;
+  border: 1px solid #f1e3c6;
+  border-radius: 20px;
+  padding: 30px 40px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+}
+
+.testimonial-form h3 {
+  text-align: center;
+  color: #c5a349;
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 25px;
+}
+
+.testimonial-form input,
+.testimonial-form textarea,
+.testimonial-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #e7d8b4;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.testimonial-form input:focus,
+.testimonial-form textarea:focus,
+.testimonial-form select:focus {
+  border-color: #c5a349;
+  box-shadow: 0 0 0 3px rgba(197, 163, 73, 0.15);
+  outline: none;
+}
+
+/* ---------- Submit Button ---------- */
+.testimonial-form button {
+  background-color: #c5a349;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.testimonial-form button:hover {
+  background-color: #b48e34;
+}
+
+/* ---------- Status Message ---------- */
+.status-message {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4b4b4b;
+  margin-top: 10px;
+}
+
+/* ---------- Testimonials Carousel ---------- */
+.testimonials-slider {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #f1e3c6;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card p.message {
+  color: #555;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-card .stars {
+  margin-bottom: 10px;
+}
+
+.testimonial-card .stars svg {
+  color: #c5a349;
+  margin-right: 2px;
+}
+
+.testimonial-card .name {
+  font-weight: 600;
+  color: #222;
+}
+
+.testimonial-card .date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 15px;
+  }
+  .testimonial-form {
+    padding: 25px 20px;
+  }
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* ===============================
+   📸 ABOUT PAGE (MATCHING SERVICES STYLE)
+   =============================== */
+
+.about-section {
+  background-color: #fffaf5;
+  min-height: 100vh;
+  padding: 80px 50px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Title ---------- */
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #c5a349;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.about-section .intro-text {
+  text-align: center;
+  color: #5a5a5a;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  max-width: 900px;
+  margin: 0 auto 70px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Layout Grid ---------- */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* ---------- Left Column: Why Choose Us ---------- */
+.about-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #1f1f1f;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-left: 5px solid #c5a349;
+  padding-left: 10px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.about-text ul li::before {
+  content: "★";
+  color: #c5a349;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  opacity: 0.9;
+}
+
+.about-text ul li:hover {
+  transform: translateX(5px);
+  color: #c5a349;
+}
+
+/* ---------- Right Column: Map ---------- */
+.map-container {
+  background: #fff;
+  border: 1px solid #f1e3c6;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.map-container:hover {
+  transform: scale(1.02);
+}
+
+.map-container h3 {
+  font-family: "Playfair Display", serif;
+  color: #1f1f1f;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .about-section {
+    padding: 60px 25px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text h3,
+  .map-container h3 {
+    text-align: center;
+    border: none;
+    padding: 0;
+  }
+
+  .about-text ul li {
+    justify-content: center;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+
+
+/* ===============================
+   📸 BOOKING PAGE STYLING
+   =============================== */
+
+.booking-section {
+  background-color: #fffaf5;
+  min-height: 100vh;
+  padding: 80px 50px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Title ---------- */
+.booking-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #c5a349;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.booking-section p.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* ---------- Form Container ---------- */
+.booking-form {
+  background: #fff;
+  border: 1px solid #f1e3c6;
+  border-radius: 20px;
+  padding: 40px 50px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.booking-form label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* ---------- Inputs ---------- */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e7d8b4;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #c5a349;
+  box-shadow: 0 0 0 3px rgba(197, 163, 73, 0.2);
+  outline: none;
+}
+
+/* ---------- Full-width Fields ---------- */
+.booking-form textarea {
+  grid-column: span 2;
+  resize: none;
+  min-height: 120px;
+}
+
+/* ---------- Submit Button ---------- */
+.booking-form button {
+  grid-column: span 2;
+  background-color: #c5a349;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.booking-form button:hover {
+  background-color: #b48e34;
+}
+
+/* ---------- Confirmation Message ---------- */
+.booking-status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #4b4b4b;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 900px) {
+  .booking-section {
+    padding: 60px 25px;
+  }
+
+  .booking-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form textarea,
+  .booking-form button {
+    grid-column: span 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+   📸 HOME PAGE STYLING
+   =============================== */
+
+/* ---------- Hero Section ---------- */
+.hero {
+  background: linear-gradient(135deg, #fff6e9 0%, #fdeee7 40%, #f9e3d1 100%);
+  color: #3b2f2f;
+  text-align: center;
+  padding: 140px 20px;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #3a2c2c;
+  margin-bottom: 15px;
+}
+
+.hero-subtext {
+  font-family: "Poppins", sans-serif;
+  color: #c5a349;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.btn-hero {
+  background-color: #c5a349;
+  color: #fff;
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #b3923d;
+  transform: translateY(-3px);
+}
+
+/* ---------- About Section ---------- */
+.about-section {
+  background-color: #fffaf5;
+  padding: 100px 50px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  color: #c5a349;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 450px;
+  text-align: left;
+  color: #444;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-photo {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 200px;
+  border: 4px solid #c5a349;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Services Preview ---------- */
+.services-preview {
+  background-color: #fffefb;
+  padding: 100px 50px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.services-preview h2 {
+  font-family: "Playfair Display", serif;
+  color: #c5a349;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #f1e3c6;
+  border-radius: 18px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px 25px;
+  max-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+  font-family: "Playfair Display", serif;
+  color: #3a2c2c;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #5b5b5b;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #c5a349;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  background-color: #3b3b3b;
+  color: #fff;
+  padding: 10px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #c5a349;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .about-wrapper {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .about-photo img {
+    width: 260px;
+    height: 340px;
+  }
+
+  .service-card {
+    max-width: 90%;
+  }
+}
+
+
+
+/* ==========================================================
+   📱 Responsive Design (for all pages)
+   ========================================================== */
+
+/* --- Tablet (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-width: 320px;
+    margin: 1rem auto;
+    border-radius: 20px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+    line-height: 1.3;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+  }
+
+  .btn-hero {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .about-text li {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.4rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-carousel .slick-slide {
+    padding: 0 10px;
+  }
+
+  .testimonial-form,
+  .admin-form {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .btn,
+  .btn-hero,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- Extra Small Devices (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.85rem;
+  }
+
+  .gallery-photo {
+    border-radius: 10px;
+  }
+
+  .watermark {
+    font-size: 0.8rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-card small {
+    font-size: 0.8rem;
+  }
+
+  .about-photo img {
+    max-width: 250px;
+  }
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+
+
+
