@@ -19,6 +19,30 @@ export default function Home() {
 </div>
 
 
+{/* 🖼 GALLERY PREVIEW SECTION */}
+      <section className="home-gallery-preview">
+        <h2 data-aos="fade-up">Portfolio & Gallery</h2>
+        <p className="home-gallery-subtext" data-aos="fade-up" data-aos-delay="100">
+          A glimpse of our most loved wedding & pre-wedding moments 💞
+        </p>
+
+        <div className="home-gallery-grid" data-aos="zoom-in">
+          <img src="/gallery/wedding/img6.webp" alt="Wedding" />
+          <img src="/gallery/wedding/img7.webp" alt="Wedding" />
+          <img src="/gallery/wedding/img5.webp" alt="Wedding" />
+          <img src="/gallery/wedding/img4.jpg" alt="Wedding" />
+          <img src="/gallery/prewedding/img1.jpg" alt="Prewedding" />
+          <img src="/gallery/wedding/img10.webp" alt="Wedding" />
+          <img src="/gallery/Baby Shoot/img1.JPG" alt="Baby Shoot" />
+        </div>
+
+        <div className="home-gallery-btn" data-aos="zoom-in" data-aos-delay="200">
+          <Link to="/gallery" className="btn-secondary">
+            View Full Gallery →
+          </Link>
+        </div>
+      </section>
+
 
       {/* About Preview */}
       <section className="about-section">
