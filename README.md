@@ -1,2 +1,2 @@
 # photo-studio-website
-Capturing Memories Forever
+Photography studio website built with React.
