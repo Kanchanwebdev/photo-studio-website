@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
@@ -12,51 +12,75 @@ const AdminDashboard = () => {
   });
   const [message, setMessage] = useState("");
 
-  const token = localStorage.getItem("adminToken");
+  // ✅ Get token from localStorage
+  const token = localStorage.getItem("token");
 
-  // Redirect if not logged in
-  if (!token) {
-    navigate("/admin");
-  }
+  // ✅ Protect route - redirect to login if not logged in
+  useEffect(() => {
+    if (!token) {
+      navigate("/admin-login");
+    }
+  }, [token, navigate]);
 
-  // Handle input changes
+  // ✅ Handle input change
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Handle form submit
+  // ✅ Handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/services/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE || "https://photo-studio-api-8w4k.onrender.com/api"}/services/add`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await res.json();
 
       if (res.ok) {
         setMessage("✅ Service added successfully!");
-        setForm({ name: "", description: "", price: "", category: "", image: "" });
+        setForm({
+          name: "",
+          description: "",
+          price: "",
+          category: "",
+          image: "",
+        });
       } else {
         setMessage(`❌ ${data.message || "Failed to add service"}`);
       }
     } catch (err) {
+      console.error("Error adding service:", err);
       setMessage("⚠️ Server error. Please try again.");
     }
   };
 
-  // Logout
+  // ✅ Logout function
   const handleLogout = () => {
-    localStorage.removeItem("adminToken");
-    navigate("/admin");
+    localStorage.removeItem("token");
+    navigate("/admin-login");
   };
+
+  // ✅ Optional: Auto logout after 1 hour
+  useEffect(() => {
+    const loginTime = localStorage.getItem("loginTime");
+    if (loginTime && Date.now() - loginTime > 3600000) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("loginTime");
+      alert("Session expired. Please log in again.");
+      navigate("/admin-login");
+    }
+  }, [navigate]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 flex flex-col items-center py-10 px-4">
@@ -64,10 +88,10 @@ const AdminDashboard = () => {
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">Admin Dashboard</h2>
           <button
+            className="bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg text-sm font-medium transition"
             onClick={handleLogout}
-            className="text-sm bg-rose-500 text-white px-3 py-1 rounded-lg hover:bg-rose-600 transition"
           >
-            Logout
+            🔒 Logout
           </button>
         </div>
 
