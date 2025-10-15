@@ -13,11 +13,17 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: process.env.CLIENT_URL || "*",
-  credentials: true,
-}));
-app.use(express.json());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // for local development
+      "https://s-arts-photo-studio.vercel.app", // ✅ your Vercel frontend URL
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 
 // ✅ Connect MongoDB
 mongoose
