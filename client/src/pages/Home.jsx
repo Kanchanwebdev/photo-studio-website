@@ -9,7 +9,7 @@ export default function Home() {
   <div className="hero-content">
     <h1 data-aos="fade-up">❤️Capturing Memories☆<br/>Forever</h1>
 <p className="hero-subtext" data-aos="fade-up" data-aos-delay="100">
-  Wedding · Pre-wedding · Candid · Videography · Drone · Premium Albums
+  Wedding · Pre-wedding · Engagement · Candid · Videography · Drone · Premium Albums
 </p>
 <a href="/booking" className="btn-hero" data-aos="zoom-in" data-aos-delay="200">
   Book Your Shoot
@@ -71,24 +71,24 @@ export default function Home() {
       {/* Services Preview */}
       <section className="services-preview">
         <h2 data-aos="fade-up">Our Services📷</h2>
-
+     <p>👉🏼Package Details:- Basic-50000, Primium-100000, Luxury-150000.</p>
 <div className="service-cards">
   <div className="service-card" data-aos="flip-left">
-    <h3>Wedding Photography</h3>
+    <h3>Wedding Photography Album</h3>
     <p>Timeless wedding coverage with cinematic quality.</p>
-    <p className="price">₹25,000 onwards</p>
+    <p className="price">₹50,000 onwards</p>
   </div>
 
   <div className="service-card" data-aos="flip-left" data-aos-delay="100">
     <h3>Pre-Wedding Shoots</h3>
     <p>Creative pre-wedding concepts tailored for you.</p>
-    <p className="price">₹15,000 onwards</p>
+    <p className="price">₹25,000 onwards</p>
   </div>
 
   <div className="service-card" data-aos="flip-left" data-aos-delay="200">
-    <h3>Candid & Cinematic Films</h3>
+    <h3>Cinematic Films</h3>
     <p>Storytelling through moments and emotions.</p>
-    <p className="price">₹30,000 onwards</p>
+    <p className="price">₹20,000 onwards</p>
   </div>
 </div>
 
