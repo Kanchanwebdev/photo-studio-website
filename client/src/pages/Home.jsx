@@ -11,9 +11,9 @@ export default function Home() {
 <p className="hero-subtext" data-aos="fade-up" data-aos-delay="100">
   Wedding · Pre-wedding · Engagement · Candid · Videography · Drone · Premium Albums
 </p>
-<a href="/booking" className="btn-hero" data-aos="zoom-in" data-aos-delay="200">
+{/*<a href="/booking" className="btn-hero" data-aos="zoom-in" data-aos-delay="200">
   Book Your Shoot
-</a>
+</a>*/}
 
   </div>
 </div>
@@ -92,9 +92,9 @@ export default function Home() {
   </div>
 </div>
 
-        <Link to="/services" className="btn-secondary">
+        {/*<Link to="/services" className="btn-secondary">
           Explore More
-        </Link>
+        </Link>*/}
       </section>
     </div>
   );
