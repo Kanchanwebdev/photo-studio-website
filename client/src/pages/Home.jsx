@@ -4,7 +4,7 @@ import "../styles.css";
 import { Link } from "react-router-dom";
 
 /* Video card that plays when >=50% visible */
-function VideoCard({ video }) {
+{/*function VideoCard({ video }) {
   const vidRef = useRef(null);
 
   useEffect(() => {
@@ -48,10 +48,10 @@ function VideoCard({ video }) {
       <figcaption className="video-caption">{video.title}</figcaption>
     </figure>
   );
-}
+}*/}
 
 export default function Home() {
-  const videos = [
+  {/*const videos = [
     {
       id: "wedding",
       src: "/videos/wedding-reel.mp4",
@@ -70,7 +70,7 @@ export default function Home() {
       poster: "/thumbnails/prewedding-thumb.jpg",
       title: "Pre-Wedding Reel",
     },
-  ];
+  ];*/}
 
   return (
     <div>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== Animated Video Strip (after hero) ===== */}
+      {/* ===== Animated Video Strip (after hero) ===== 
       <section className="video-strip-section">
         <h2 className="section-title" data-aos="fade-up">Reels & Highlights</h2>
         <p className="section-sub" data-aos="fade-up" data-aos-delay="100">
@@ -95,7 +95,7 @@ export default function Home() {
             <VideoCard key={v.id} video={v} />
           ))}
         </div>
-      </section>
+      </section>*/}
 
       {/* 🖼 GALLERY PREVIEW SECTION */}
       <section className="home-gallery-preview">

@@ -31,7 +31,7 @@ export default function Gallery() {
   );
 
   // --- list of videos (local public folder paths) ---
-  const videos = [
+  {/*const videos = [
     {
       id: "wedding",
       src: "/videos/wedding-reel.mp4",
@@ -50,7 +50,7 @@ export default function Gallery() {
       poster: "/thumbnails/wedding-thumb.jpg",
       title: "Wedding Reel",
     },
-  ];
+  ];*/}
 
   return (
     <div className="container">
@@ -68,13 +68,13 @@ export default function Gallery() {
           </button>
         ))}
 
-        {/* Videos tab */}
+        {/* Videos tab 
         <button
           className={`tab-btn ${activeTab === "Videos" ? "active" : ""}`}
           onClick={() => setActiveTab("Videos")}
         >
           🎬 Videos
-        </button>
+        </button>*/}
       </div>
 
       {/* Images Grid */}
@@ -97,7 +97,7 @@ export default function Gallery() {
         </div>
       )}
 
-      {/* Video Gallery */}
+      {/* Video Gallery 
       {activeTab === "Videos" && (
         <div id="videos" className="video-grid">
           {videos.map((v) => (
@@ -116,7 +116,7 @@ export default function Gallery() {
             </figure>
           ))}
         </div>
-      )}
+      )}*/}
 
       {/* Lightbox (images only) */}
       {open >= 0 && (
