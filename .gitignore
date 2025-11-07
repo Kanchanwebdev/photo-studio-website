@@ -1,3 +1,8 @@
 node_modules/
 .env
 build/
+
+# ignore build output and videos
+client/dist/
+client/public/videos/
+client/public/*.mp4
