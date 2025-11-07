@@ -11,3 +11,8 @@ client/public/*.mp4
 client/dist/
 client/public/videos/
 client/public/*.mp4
+
+# ignore builds & videos
+client/dist/
+client/public/videos/
+client/public/*.mp4
