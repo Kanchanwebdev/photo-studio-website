@@ -6,3 +6,8 @@ build/
 client/dist/
 client/public/videos/
 client/public/*.mp4
+
+# ignore build output and large media
+client/dist/
+client/public/videos/
+client/public/*.mp4
